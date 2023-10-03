@@ -3,7 +3,7 @@ import { ContactsList } from './ContactList/ContactList';
 import { Layout, Subtitle, Title } from './Layout';
 import { Filter } from './Filter/Filter';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts, getError, getIsLoading } from 'redux/selectors';
+import { getError, getIsLoading } from 'redux/selectors';
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/operations';
 
