@@ -7,10 +7,9 @@ import {
   ErrorMsg,
   Button,
 } from './ContactForm_styled';
-import { addContact } from 'redux/ContactsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
-import { nanoid } from 'nanoid';
+import { addContact } from 'redux/operations';
 
 const formSchema = Yup.object().shape({
   name: Yup.string()
@@ -38,7 +37,6 @@ export const ContactForm = () => {
 
   const handleSubmit = (values, actions) => {
     const newContact = {
-      id: nanoid(),
       name: values.name,
       number: values.number,
     };
